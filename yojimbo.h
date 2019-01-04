@@ -5346,7 +5346,8 @@ namespace yojimbo
 
         const Address & GetAddress() const { return m_boundAddress; }
 
-    private:
+	// CFX CHANGE
+    protected:
 
         void TransmitPacketFunction( int clientIndex, uint16_t packetSequence, uint8_t * packetData, int packetBytes );
 
@@ -5767,7 +5768,7 @@ namespace yojimbo
 
         const Address & GetAddress() const { return m_boundAddress; }
 
-    private:
+    protected:
 
         bool GenerateInsecureConnectToken( uint8_t * connectToken, 
                                            const uint8_t privateKey[], 
@@ -5775,7 +5776,7 @@ namespace yojimbo
                                            const Address serverAddresses[], 
                                            int numServerAddresses );
 
-        void CreateClient( const Address & address );
+        virtual void CreateClient( const Address & address );
 
         void DestroyClient();
 
