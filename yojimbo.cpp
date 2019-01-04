@@ -3213,7 +3213,6 @@ namespace yojimbo
                                                m_config.timeout, 
                                                clientId, 
                                                m_config.protocolId, 
-                                               0, 
                                                (uint8_t*)privateKey, 
                                                connectToken ) == NETCODE_OK;
     }
